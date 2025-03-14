@@ -1,0 +1,93 @@
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    margin-top: 50px;
+    background-color: #e3e8ee; /* 酒紅色 */
+}
+
+header {
+    background-color: #911725;
+    color: white;
+    padding: 20px;
+}
+
+.logo {
+    width: 500px;
+    height: auto;
+}
+
+h1 {
+    margin: 0;
+}
+
+.section {
+    background-color: white;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    padding: 20px;
+    margin: 20px auto;
+    width: 80%;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+button {
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    margin: 5px;
+    display: block;
+    margin: 10px auto;
+    background-color: #004080;
+    color: white;
+    border: none;
+    border-radius: 5px;
+}
+
+button:hover {
+    background-color: #003366;
+}
+
+input, select {
+    display: block;
+    margin: 10px auto;
+    padding: 10px;
+    font-size: 16px;
+    width: 20%; /* 調整輸入欄位寬度 */
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.wide-select {
+    width: 60%; /* 調整選擇人員的下拉式選單寬度 */
+}
+
+#clock-in-time, #clock-out-time {
+    margin-top: 20px;
+    font-size: 18px;
+}
+
+#clock-records, #all-clock-records, #user-list {
+    margin-top: 20px;
+    font-size: 16px;
+    text-align: center; /* 表格內容置中顯示 */
+    display: inline-block;
+    width: auto;
+    border-collapse: collapse;
+}
+
+table {
+    margin: 0 auto;
+    border-collapse: collapse;
+    width: auto;
+}
+
+th, td {
+    padding: 10px;
+    border: 1px solid #ccc;
+    text-align: center;
+}
+
+th {
+    background-color: #004080;
+    color: white;
+}

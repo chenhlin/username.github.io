@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>教學品保中心工讀打卡系統</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <img src="1741761244624.jpg" alt="逢甲大學 Logo" class="logo">
+        <h1>教學品保中心工讀打卡系統</h1>
+    </header>
+
+    <div id="auth-code" style="text-align: center; font-size: 1.5em; margin: 20px 0; display: none;"></div> <!-- 顯示認證碼的元素 -->
+
+    <div id="auth-section" class="section">
+        <h2>登入</h2>
+        <div id="current-date-time"></div>
+        <form id="login-form">
+            <input type="text" id="login-username" placeholder="學生證號" required>
+            <input type="password" id="login-password" placeholder="密碼" required>
+            <input type="text" id="login-auth-code" placeholder="今日認證碼" required>
+            <button type="submit">登入</button>
+        </form>
+        <h2><a href="#" id="register-link">註冊</a></h2>
+        <h2><a href="#" id="admin-login-link">管理者登入</a></h2>
+    </div>
+
+    <div id="register-section" class="section" style="display: none;">
+        <h2>註冊</h2>
+        <form id="register-form">
+            <input type="text" id="register-student-id" placeholder="學生證號" required>
+            <input type="text" id="register-name" placeholder="姓名" required>
+            <input type="password" id="register-password" placeholder="密碼" required>
+            <button type="submit">註冊</button>
+        </form>
+        <button id="back-to-auth">返回</button>
+    </div>
+
+    <div id="admin-login-section" class="section" style="display: none;">
+        <h2>管理者登入</h2>
+        <form id="admin-login-form">
+            <input type="text" id="admin-username" placeholder="管理者用戶名" required>
+            <input type="password" id="admin-password" placeholder="管理者密碼" required>
+            <button type="submit">登入</button>
+        </form>
+        <button id="back-to-auth-admin">返回</button>
+    </div>
+
+    <div id="clock-in-section" class="section" style="display: none;">
+        <div id="user-info"></div>
+        <button id="clock-in-btn">上班打卡</button>
+        <button id="clock-out-btn">下班打卡</button>
+        <div id="clock-in-time"></div>
+        <div id="clock-out-time"></div>
+        <h2>打卡記錄</h2>
+        <table id="clock-records" border="1">
+            <thead>
+                <tr>
+                    <th>日期</th>
+                    <th>上午/下午</th>
+                    <th>上班</th>
+                    <th>下班</th>
+                    <th>工作時數</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- 打卡記錄 -->
+            </tbody>
+        </table>
+        <button id="back-btn">返回上一頁</button>
+    </div>
+
+    <div id="admin-section" class="section" style="display: none;">
+        <h2>所有使用者的打卡記錄</h2>
+        <label for="user-select">選擇人員：</label>
+        <select id="user-select" class="wide-select">
+            <option value="all">所有使用者</option>
+            <!-- 人員選項 -->
+        </select>
+        <table id="all-clock-records" border="1">
+            <thead>
+                <tr>
+                    <th>用戶名</th>
+                    <th>姓名</th>
+                    <th>日期</th>
+                    <th>上午/下午</th>
+                    <th>上班</th>
+                    <th>下班</th>
+                    <th>工作時數</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- 所有使用者的打卡記錄 -->
+            </tbody>
+        </table>
+        <button id="download-btn">下載為Excel</button>
+        <button id="back-btn-admin">返回上一頁</button>
+
+        <h2>使用者清單</h2>
+        <table id="user-list" border="1">
+            <thead>
+                <tr>
+                    <th>學號</th>
+                    <th>姓名</th>
+                    <th>註冊日期時間</th>
+                    <th>密碼</th>
+                    <th>操作</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- 使用者清單 -->
+            </tbody>
+        </table>
+        <button id="add-user-btn">新增使用者</button>
+    </div>
+
+    <div id="add-user-section" class="section" style="display: none;">
+        <h2>新增使用者</h2>
+        <form id="add-user-form">
+            <input type="text" id="add-student-id" placeholder="學生證號" required>
+            <input type="text" id="add-name" placeholder="姓名" required>
+            <input type="password" id="add-password" placeholder="密碼" required>
+            <button type="submit">新增</button>
+        </form>
+        <button id="back-to-admin">返回</button>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
